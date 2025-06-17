@@ -1,23 +1,21 @@
-# 🗂️ Day 9: Mastering Dictionaries in Python
+# 🗂️ Day 9: Dictionaries in Python
 
-Welcome to Day 9! Today you’ll learn how to use **dictionaries**, one of the most versatile and important data structures in Python. Dictionaries allow you to store data in pairs – a **key** and a **value**.
+Today you’ll learn about **dictionaries**, a powerful data structure in Python that stores data in **key-value pairs**.
 
 ---
 
 ## 🧠 What You’ll Learn
 - What a dictionary is
-- How to create and read from dictionaries
-- How to update and remove data
+- How to create and access dictionary elements
+- Adding, modifying, and deleting items
 - Useful dictionary methods
-- How to loop through dictionaries
+- Looping through a dictionary
 
 ---
 
-## 📚 What is a Dictionary?
+## 📘 What is a Dictionary?
 
-A **dictionary** is a collection of **key-value pairs**.
-
-Each **key** is unique, and it maps to a **value**:
+A dictionary is like a real-life dictionary: you look up a **key** (e.g. a word) and get its **value** (e.g. the definition).
 
 ```python
 person = {
@@ -27,129 +25,58 @@ person = {
 }
 ```
 
-Here:
-- `"name"`, `"age"`, and `"is_student"` are **keys**
-- `"Alice"`, `25`, and `True` are **values**
-
-You can think of it like a real dictionary:
-- **Word (key)** ➡️ **Definition (value)**
-
 ---
 
-## 🛠 Creating a Dictionary
-
-You use curly braces `{}` and separate keys and values with colons `:`:
+## 🔍 Accessing and Modifying Data
 
 ```python
-car = {
-    "brand": "Toyota",
-    "model": "Corolla",
-    "year": 2022
-}
+print(person["name"])         # Alice
+person["age"] = 26            # update value
+person["city"] = "New York"   # add new key-value pair
 ```
 
----
-
-## 🔍 Accessing Values
-
-You access a value by referencing its key:
+Use `.get()` to avoid errors:
 
 ```python
-print(car["brand"])  # Output: Toyota
-```
-
-To avoid errors when a key might not exist, use `.get()`:
-
-```python
-print(car.get("color", "Not available"))  # Safe access
-```
-
----
-
-## ✏️ Modifying a Dictionary
-
-You can change or add data:
-
-```python
-car["year"] = 2023         # update value
-car["color"] = "red"       # add new key-value pair
+print(person.get("email", "Not found"))
 ```
 
 ---
 
 ## ❌ Removing Items
 
-- Remove a specific key:
 ```python
-del car["model"]
+del person["age"]         # remove by key
+person.pop("city")        # remove and return value
+person.clear()            # remove all items
 ```
 
-- Use `pop()` to remove and return a value:
-```python
-car.pop("brand")
-```
+---
 
-- Remove everything:
+## 🛠 Useful Methods
+
 ```python
-car.clear()
+person.keys()      # all keys
+person.values()    # all values
+person.items()     # key-value pairs
 ```
 
 ---
 
 ## 🔁 Looping Through a Dictionary
 
-Loop through **keys**:
-
 ```python
-for key in car:
-    print(key)
-```
+for key in person:
+    print(key, "->", person[key])
 
-Loop through **values**:
-
-```python
-for value in car.values():
-    print(value)
-```
-
-Loop through **key-value pairs**:
-
-```python
-for key, value in car.items():
+for key, value in person.items():
     print(f"{key}: {value}")
 ```
 
 ---
 
-## 🧰 Useful Methods
+## 🎯 Today’s Challenge
 
-| Method          | Description                      |
-|-----------------|----------------------------------|
-| `dict.get(key)` | Get value safely                 |
-| `dict.keys()`   | Return all keys                  |
-| `dict.values()` | Return all values                |
-| `dict.items()`  | Return all key-value pairs       |
-| `dict.pop(key)` | Remove and return value          |
-| `dict.clear()`  | Remove all items from dictionary |
+Create and use dictionaries to store structured data and loop through key-value pairs. Check the tasks in `exercitii.py` and answers in `solutii.py`.
 
----
-
-## ✅ Real World Example
-
-```python
-student = {
-    "name": "Maria",
-    "grades": [9, 8.5, 10],
-    "passed": True
-}
-print(f"{student['name']} has grades: {student['grades']}")
-```
-
----
-
-## 🎯 Practice Time!
-
-Work with key-value data, access it safely, and print it in useful formats.
-Your tasks are in `exercitii.py`. Check solutions in `solutii.py`.
-
-➡️ Up next: **Tuples & Sets – for fixed and unique data!**
+➡️ Next up: **Tuples and Sets!**
