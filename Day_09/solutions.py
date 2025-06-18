@@ -1,23 +1,8 @@
-# Day 9 - Solutions
+numbers = (7, 11, 42)
+# numbers[0] = 10  # This will raise an error: tuples are immutable
 
-# Exercise 1:
-person = {
-    "name": "John",
-    "age": 30,
-    "favorite_color": "blue"
-}
+squares = [x**2 for x in range(10)]
+evens = [x for x in range(21) if x % 2 == 0]
 
-# Exercise 2:
-print(person["age"])
-
-# Exercise 3:
-person["city"] = "London"
-print(person)
-
-# Exercise 4:
-for key, value in person.items():
-    print(f"{key}: {value}")
-
-# Exercise 5 (Bonus):
-key = input("Enter a key to look up: ")
-print(person.get(key, "Not found"))
+print(squares)
+print(evens)

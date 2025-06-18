@@ -1,16 +1,4 @@
-# Day 9 - Exercises
-
-# Exercise 1:
-# Create a dictionary to store a person's name, age, and favorite color.
-
-# Exercise 2:
-# Print the person's age from the dictionary.
-
-# Exercise 3:
-# Add a new key called "city" and assign it a value.
-
-# Exercise 4:
-# Use a loop to print all key-value pairs in the dictionary.
-
-# Exercise 5 (Bonus):
-# Ask the user for a key and print the corresponding value (or "Not found").
+# 1. Create a tuple of 3 favorite numbers.
+# 2. Try to change one value in the tuple (what happens?).
+# 3. Create a list of squares from 0 to 9 using list comprehension.
+# 4. Create a list of even numbers between 0 and 20 using list comprehension.

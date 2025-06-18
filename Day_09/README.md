@@ -1,82 +1,42 @@
-# 🗂️ Day 9: Dictionaries in Python
-
-Today you’ll learn about **dictionaries**, a powerful data structure in Python that stores data in **key-value pairs**.
+# 📘 Day 9: Tuples and List Comprehensions
 
 ---
 
-## 🧠 What You’ll Learn
-- What a dictionary is
-- How to create and access dictionary elements
-- Adding, modifying, and deleting items
-- Useful dictionary methods
-- Looping through a dictionary
+## 🔐 Tuples
 
----
-
-## 📘 What is a Dictionary?
-
-A dictionary is like a real-life dictionary: you look up a **key** (e.g. a word) and get its **value** (e.g. the definition).
+Tuples are similar to lists, but **immutable** — you can't change their content after creation.
 
 ```python
-person = {
-    "name": "Alice",
-    "age": 25,
-    "is_student": True
-}
+person = ("Alice", 30, "New York")
+print(person[0])  # "Alice"
 ```
+
+Use cases:
+- Safer than lists
+- Hashable → usable as dictionary keys
+- Lightweight and fast
 
 ---
 
-## 🔍 Accessing and Modifying Data
+## ⚡ List Comprehensions
+
+List comprehensions allow you to create lists in a single line:
 
 ```python
-print(person["name"])         # Alice
-person["age"] = 26            # update value
-person["city"] = "New York"   # add new key-value pair
+squares = [x**2 for x in range(5)]  # [0, 1, 4, 9, 16]
 ```
 
-Use `.get()` to avoid errors:
+You can also use conditions:
 
 ```python
-print(person.get("email", "Not found"))
+even = [x for x in range(10) if x % 2 == 0]
 ```
+
+Nested comprehensions are also possible!
 
 ---
 
-## ❌ Removing Items
+## 🎯 Goal
 
-```python
-del person["age"]         # remove by key
-person.pop("city")        # remove and return value
-person.clear()            # remove all items
-```
-
----
-
-## 🛠 Useful Methods
-
-```python
-person.keys()      # all keys
-person.values()    # all values
-person.items()     # key-value pairs
-```
-
----
-
-## 🔁 Looping Through a Dictionary
-
-```python
-for key in person:
-    print(key, "->", person[key])
-
-for key, value in person.items():
-    print(f"{key}: {value}")
-```
-
----
-
-## 🎯 Today’s Challenge
-
-Create and use dictionaries to store structured data and loop through key-value pairs. Check the tasks in `exercitii.py` and answers in `solutii.py`.
-
-➡️ Next up: **Tuples and Sets!**
+- Understand how and when to use tuples
+- Master list comprehensions for clean, powerful list creation
